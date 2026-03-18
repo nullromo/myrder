@@ -1,40 +1,41 @@
 import { myrderBlue, myrderRed } from './colors';
-import myrServitor from './images/myr-servitor.jpg';
+import myrServitor from './images/myr-servitor-art.jpg';
+import { TabPanel } from './tabPanel';
 
 export const Body = () => {
     return (
         <div
             style={{
+                display: 'flex',
                 flexDirection: 'column',
                 minHeight: '100vh',
-                display: 'flex',
             }}
         >
             <div
                 style={{
-                    height: '40vh',
                     backgroundImage: `url(${myrServitor})`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
-                    display: 'flex',
-                    justifyContent: 'center',
                     boxShadow: 'inset 0px -12px 12px 8px',
+                    display: 'flex',
+                    height: '40vh',
+                    justifyContent: 'center',
                 }}
             >
                 <div
                     style={{
+                        background: 'black',
+                        borderRadius: '20px',
+                        boxShadow: '0px 0px 12px 8px',
+                        fontFamily: 'Beleren',
                         fontSize: '64pt',
-                        width: 'fit-content',
                         height: 'fit-content',
                         padding: '0 24px 0 20px',
-                        textAlign: 'center',
                         position: 'relative',
+                        textAlign: 'center',
                         top: '90%',
-                        background: 'black',
-                        fontFamily: 'Beleren',
-                        boxShadow: '0px 0px 12px 8px',
-                        borderRadius: '20px',
+                        width: 'fit-content',
                     }}
                 >
                     <span style={{ color: myrderRed }}>MYR</span>
@@ -43,50 +44,58 @@ export const Body = () => {
             </div>
             <div
                 style={{
-                    marginTop: '70px',
-                    textAlign: 'center',
+                    background: 'black',
                     color: 'white',
                     flexGrow: 1,
                     height: '100px',
-                    background: 'black',
+                    marginTop: '70px',
+                    textAlign: 'center',
                 }}
             >
-                <div style={{ fontFamily: 'Mplantin', fontSize: '30pt' }}>
+                <div style={{ fontFamily: 'MPlantin', fontSize: '30pt' }}>
                     A{' '}
                     <span
                         style={{
-                            textDecoration: 'underline',
                             color: myrderRed,
                             fontWeight: 'bold',
+                            textDecoration: 'underline',
                         }}
                     >
                         NEW
                     </span>{' '}
                     shared-deck Magic the Gathering format based around{' '}
-                    <span style={{ fontWeight: 'bold', color: myrderBlue }}>
+                    <span style={{ color: myrderBlue, fontWeight: 'bold' }}>
                         Myr Servitor
                     </span>
                 </div>
                 <hr
                     style={{
-                        width: '80%',
-                        marginTop: '20px',
                         marginBottom: '20px',
+                        marginTop: '20px',
+                        width: '80%',
                     }}
                 />
                 <div
                     style={{
-                        fontStyle: 'italic',
-                        fontSize: '20pt',
-                        fontFamily: 'Mplantin',
-                        justifyContent: 'space-around',
                         display: 'flex',
+                        fontFamily: 'MPlantin',
+                        fontSize: '20pt',
+                        fontStyle: 'italic',
+                        justifyContent: 'space-around',
+                        marginBottom: '80px',
                     }}
                 >
                     <div>{`"It's black Dandân"`}</div>
                     <div>{'"I love it!"'}</div>
                     <div>{'"Definitely worth a try"'}</div>
                 </div>
+                <TabPanel
+                    tabs={[
+                        { content: 'rules content', label: 'Rules' },
+                        { content: 'decklist content', label: 'Decklist' },
+                        { content: 'changelog content', label: 'Changelog' },
+                    ]}
+                />
             </div>
         </div>
     );
