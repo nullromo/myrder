@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { myrderBlue, myrderRed } from './colors';
 
 type TabData = { label: string; content: React.ReactNode };
 
@@ -6,7 +7,7 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
     const [activeIndex, setActiveIndex] = React.useState(0);
 
     return (
-        <div>
+        <>
             <div
                 style={{
                     display: 'flex',
@@ -22,10 +23,12 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
                             key={index}
                             style={{
                                 background:
-                                    activeIndex === index ? 'yellow' : 'green',
+                                    activeIndex === index
+                                        ? myrderBlue
+                                        : myrderRed,
                                 borderRadius: '10px 10px 0 0',
                                 cursor: 'pointer',
-                                padding: '10px',
+                                padding: '6px 30px',
                                 userSelect: 'none',
                             }}
                             onClick={() => {
@@ -37,7 +40,16 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
                     );
                 })}
             </div>
-            {props.tabs[activeIndex].content}
-        </div>
+            <div
+                style={{
+                    background: myrderBlue,
+                    borderRadius: '10px',
+                    flexGrow: 1,
+                    padding: '10px',
+                }}
+            >
+                {props.tabs[activeIndex].content}
+            </div>
+        </>
     );
 };
