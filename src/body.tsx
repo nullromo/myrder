@@ -66,6 +66,7 @@ export const Body = () => {
                     style={{
                         fontStyle: 'italic',
                         fontSize: '20pt',
+                        fontFamily: 'Mplantin',
                         justifyContent: 'space-around',
                         display: 'flex',
                     }}
