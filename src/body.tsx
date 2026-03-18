@@ -72,8 +72,8 @@ export const Body = () => {
                     }}
                 >
                     <div>{`"It's black Dandân"`}</div>
-                    <div>'"I love it!"'</div>
-                    <div>'"Definitely worth a try"'</div>
+                    <div>{'"I love it!"'}</div>
+                    <div>{'"Definitely worth a try"'}</div>
                 </div>
             </div>
         </div>
