@@ -6,12 +6,12 @@ export const MyrderApp = () => {
     return (
         <div
             style={{
-                display: 'flex',
-                flexDirection: 'column',
-                width: '100%',
                 alignItems: 'center',
                 background: 'black',
+                display: 'flex',
+                flexDirection: 'column',
                 minHeight: '100vh',
+                width: '100%',
             }}
         >
             <div

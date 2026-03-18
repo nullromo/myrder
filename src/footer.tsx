@@ -4,11 +4,11 @@ export const Footer = () => {
     return (
         <div
             style={{
-                display: 'flex',
-                width: '100%',
-                justifyContent: 'center',
-                color: 'white',
                 background: myrderBlue,
+                color: 'white',
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
             }}
         >
             asdf
