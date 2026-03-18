@@ -1,14 +1,14 @@
 # Myrder
 
-Website for a shared-deck Magic the Gathering format. Check out [myrder.com](myrder.com).
+Website for a shared-deck Magic the Gathering format. Check out
+[myrder.com](myrder.com).
 
 ## TODO
 
-- favicon
 - headline and business card
 - pages
-  - rules
-  - changelog
+    - rules
+    - changelog
 - contact info
 - link to github
 - link to $ support page
