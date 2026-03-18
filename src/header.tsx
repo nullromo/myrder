@@ -12,7 +12,7 @@ export const Header = () => {
                 boxShadow: `12px 0px 12px -6px inset black, -12px 0px 12px -6px inset black`,
             }}
         >
-            asdf
+            &nbsp;
         </div>
     );
 };
