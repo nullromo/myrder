@@ -29,6 +29,7 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
                                 borderRadius: '10px 10px 0 0',
                                 cursor: 'pointer',
                                 padding: '6px 30px',
+                                touchAction: 'manipulation',
                                 userSelect: 'none',
                             }}
                             onClick={() => {
