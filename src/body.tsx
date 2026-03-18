@@ -52,8 +52,20 @@ export const Body = () => {
                 }}
             >
                 <div style={{ fontFamily: 'Mplantin', fontSize: '30pt' }}>
-                    A new shared-deck Magic the Gathering format based around
-                    Myr Servitor
+                    A{' '}
+                    <span
+                        style={{
+                            textDecoration: 'underline',
+                            color: myrderRed,
+                            fontWeight: 'bold',
+                        }}
+                    >
+                        NEW
+                    </span>{' '}
+                    shared-deck Magic the Gathering format based around{' '}
+                    <span style={{ fontWeight: 'bold', color: myrderBlue }}>
+                        Myr Servitor
+                    </span>
                 </div>
                 <hr
                     style={{
