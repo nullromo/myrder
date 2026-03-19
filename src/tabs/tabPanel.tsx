@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { myrderBlue, myrderRed } from './colors';
+import { myrderBlue, myrderRed } from '../util/colors';
 
 type TabData = { label: string; content: React.ReactNode };
 

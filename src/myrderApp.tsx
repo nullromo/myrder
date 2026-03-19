@@ -1,6 +1,5 @@
-import { Body } from './body';
-import { Footer } from './footer';
-import { Header } from './header';
+import { Body } from './layout/body';
+import { Stripe } from './layout/stripe';
 
 export const MyrderApp = () => {
     return (
@@ -15,11 +14,17 @@ export const MyrderApp = () => {
             }}
         >
             <div
-                style={{ boxShadow: '0 0 12px 8px inset black', width: '90%' }}
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxShadow: '0 0 12px 8px inset black',
+                    width: '90%',
+                    flexGrow: 1,
+                }}
             >
-                <Header />
+                <Stripe />
                 <Body />
-                <Footer />
+                <Stripe />
             </div>
         </div>
     );

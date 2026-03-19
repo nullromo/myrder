@@ -1,6 +1,6 @@
-import { myrderBlue } from './colors';
+import { myrderBlue } from '../util/colors';
 
-export const Header = () => {
+export const Stripe = () => {
     return (
         <div
             style={{
@@ -11,8 +11,6 @@ export const Header = () => {
                 justifyContent: 'center',
                 width: '100%',
             }}
-        >
-            &nbsp;
-        </div>
+        />
     );
 };
