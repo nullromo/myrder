@@ -5,26 +5,6 @@ Website for a shared-deck Magic the Gathering format. Check out
 
 ## original primer
 
-**Rules**
-
-- This is intended as a 1v1 format.
-
-**Decklist Rationale** This list was created using the following guiding
-principles. There may be some bends or breaks in these rules, but for the most
-part these are the rules.
-
-- (Mandatory) There can be no creatures nor creature tokens other than
-  [[Myr Servitor]].
-- Targeted removal spells should exile their target (so that they actually do
-  something).
-- Mass removal spells should not exile (so that they don't do too much).
-- Draw spells should always come with a game-state condition (other than just
-  losing life).
-- Do not include any double-faced cards.
-- Do not include any permanents that sit on the battlefield forever other than
-  lands and [[Myr Servitor]]s. Basically this means no artifacts or
-  enchantments.
-
 **Individual Card Notes** Playing the game and learning all the neat little
 interactions is part of the fun. However, I will mention some of the more
 commonly missed things.

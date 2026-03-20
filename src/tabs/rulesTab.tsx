@@ -1,4 +1,3 @@
-import { TabContent } from './tabContent';
 import myrServitorCard from '../images/cards/myr-servitor.png';
 import reanimate1 from '../images/cards/reanimate-1.png';
 import reanimate2 from '../images/cards/reanimate-2.png';
@@ -8,44 +7,8 @@ import reanimate5 from '../images/cards/reanimate-5.png';
 import reanimate6 from '../images/cards/reanimate-6.png';
 import reanimate7 from '../images/cards/reanimate-7.png';
 import reanimate8 from '../images/cards/reanimate-8.png';
-import { myrderBlue, myrderRed } from '../util/colors';
-
-type Color = 'black' | 'red' | 'white' | 'blue';
-const colorToRealColor = (color: Color) => {
-    switch (color) {
-        case 'black':
-            return 'black';
-        case 'white':
-            return 'white';
-        case 'blue':
-            return myrderBlue;
-        case 'red':
-            return myrderRed;
-        default:
-            return '';
-    }
-};
-const EmphasisText = (props: {
-    readonly front: Color;
-    readonly back?: Color;
-    readonly text: string;
-    readonly notBold?: boolean;
-}) => {
-    return (
-        <span
-            style={{
-                color: colorToRealColor(props.front),
-                fontWeight: props.notBold ? 'normal' : 'bold',
-                position: 'relative',
-                textShadow: props.back
-                    ? `2px 2px 2px ${colorToRealColor(props.back)}`
-                    : '',
-            }}
-        >
-            {props.text}
-        </span>
-    );
-};
+import { EmphasisText } from '../util/emphasisText';
+import { TabContent } from './tabContent';
 
 export const RulesTab = () => {
     return (
