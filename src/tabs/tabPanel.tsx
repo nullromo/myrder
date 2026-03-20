@@ -22,13 +22,16 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
                         <div
                             key={index}
                             style={{
+                                alignItems: 'center',
                                 background:
                                     activeIndex === index
                                         ? myrderBlue
                                         : myrderRed,
                                 borderRadius: '10px 10px 0 0',
                                 cursor: 'pointer',
+                                display: 'flex',
                                 padding: '6px 30px',
+                                textAlign: 'center',
                                 touchAction: 'manipulation',
                                 userSelect: 'none',
                             }}

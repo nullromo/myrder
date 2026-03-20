@@ -11,16 +11,16 @@ export const BodyTabs = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 flexGrow: 1,
-                width: '90%',
                 marginBottom: '20px',
+                width: '90%',
             }}
         >
             <TabPanel
                 tabs={[
-                    { content: <RulesTab />, label: 'Rules' },
-                    { content: <DecklistTab />, label: 'Decklist' },
+                    { content: <RulesTab />, label: 'Overview and Rules' },
+                    { content: <DecklistTab />, label: 'Decklist and Primer' },
                     { content: <ChangelogTab />, label: 'Changelog' },
-                    { content: <AboutTab />, label: 'About' },
+                    { content: <AboutTab />, label: 'More Information' },
                 ]}
             />
         </div>
