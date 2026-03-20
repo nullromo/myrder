@@ -25,15 +25,21 @@ const colorToRealColor = (color: Color) => {
             return '';
     }
 };
-const EmphasisText = (props: { front: Color; back: Color; text: string }) => {
+const EmphasisText = (props: {
+    readonly front: Color;
+    readonly back?: Color;
+    readonly text: string;
+    readonly notBold?: boolean;
+}) => {
     return (
         <span
             style={{
-                textShadow: `2px 2px 2px ${colorToRealColor(props.back)}`,
                 color: colorToRealColor(props.front),
-                fontWeight: 'bold',
+                fontWeight: props.notBold ? 'normal' : 'bold',
                 position: 'relative',
-                top: -1,
+                textShadow: props.back
+                    ? `2px 2px 2px ${colorToRealColor(props.back)}`
+                    : '',
             }}
         >
             {props.text}
@@ -42,103 +48,113 @@ const EmphasisText = (props: { front: Color; back: Color; text: string }) => {
 };
 
 export const RulesTab = () => {
-    //Rules content goes here. It should be an overview of how the game works and what it's all about. There should be a picture of the card Myr Servitor here.
     return (
         <TabContent>
-            <p>
-                <EmphasisText text='Myrder' front='red' back='black' /> is a{' '}
+            <p style={{ margin: '40px 20%', textAlign: 'center' }}>
+                <EmphasisText back='black' front='red' text='Myrder' /> is a{' '}
                 Magic format in which two players{' '}
-                <EmphasisText
-                    text='share the same library'
-                    front='red'
-                    back='black'
-                />
-                . The Myrder deck has{' '}
-                <EmphasisText text='80 cards' front='red' back='black' />.
-                Players start at{' '}
-                <EmphasisText text='10 life' front='red' back='black' />.{' '}
-                <EmphasisText
-                    text='Graveyards are not shared'
-                    front='red'
-                    back='black'
-                />
-                . The owner of a card on the battlefield or in a private zone is
-                the player who put it onto the battlefield or the player whose
-                zone it is in, respectively. Normal mulligan rules apply.
+                <EmphasisText front='black' text='share the same library' />.
             </p>
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <ul style={{ marginTop: 0 }}>
+                    <li>
+                        The Myrder deck has{' '}
+                        <EmphasisText front='black' text='80 cards' />.
+                    </li>
+                    <li>
+                        Players start at{' '}
+                        <EmphasisText front='black' text='10 life' />.
+                    </li>
+                    <li>
+                        <EmphasisText front='black' text='Graveyards' /> are{' '}
+                        <EmphasisText front='black' text='not shared' />.
+                    </li>
+                    <li>Normal mulligan rules apply.</li>
+                </ul>
+                <ul style={{ margin: 0, width: '40%' }}>
+                    <li>
+                        The owner of a card is the player who put it onto the
+                        battlefield or the player whose hidden zone it is in.
+                    </li>
+                </ul>
+            </div>
             <div
                 style={{
+                    alignItems: 'center',
+                    columnGap: '20px',
                     display: 'flex',
                     justifyContent: 'center',
                     paddingRight: '6%',
                     paddingTop: '20px',
-                    columnGap: '20px',
-                    alignItems: 'center',
                 }}
             >
                 <div style={{ maxWidth: '700px' }}>
-                    <p></p>
+                    <p />
                     <p>
                         <EmphasisText
-                            front='white'
                             back='black'
+                            front='white'
+                            notBold={true}
                             text='Myr Servitor'
                         />{' '}
                         is the face card of this format. There are 18 of them in
                         the deck.
                     </p>
                 </div>
-                <img style={{ width: '30%' }} src={myrServitorCard} />
+                <img src={myrServitorCard} style={{ width: '30%' }} />
             </div>
             <div style={{ padding: '0 0' }}>
                 <p>
                     These little robots love to rebuild each other... but{' '}
-                    <EmphasisText front='red' back='black' text='oops!' /> They
+                    <EmphasisText back='black' front='red' text='oops!' /> They
                     help your opponent too! It only takes 1{' '}
                     <EmphasisText
-                        front='white'
                         back='black'
+                        front='white'
+                        notBold={true}
                         text='Myr Servitor'
                     />{' '}
                     on the battlefield to bring them all back from the dead. Do
                     your best to{' '}
-                    <EmphasisText
-                        text='amass a robot army'
-                        front='red'
-                        back='black'
-                    />{' '}
+                    <EmphasisText front='black' text='amass a robot army' />{' '}
                     before your opponent can do the same! And no worries if some
-                    of them die along the way—they'll just keep rebuilding each
-                    other.
+                    of them die along the way—{"they'll"} just keep rebuilding
+                    each other.
                 </p>
             </div>
             <div
                 style={{
                     alignItems: 'center',
-                    justifyContent: 'space-between',
                     display: 'flex',
+                    justifyContent: 'space-between',
                 }}
             >
                 <div style={{ width: '60%' }}>
-                    <img style={{ width: '25%' }} src={reanimate1} />
-                    <img style={{ width: '25%' }} src={reanimate2} />
-                    <img style={{ width: '25%' }} src={reanimate7} />
-                    <img style={{ width: '25%' }} src={reanimate4} />
-                    <img style={{ width: '25%' }} src={reanimate5} />
-                    <img style={{ width: '25%' }} src={reanimate6} />
-                    <img style={{ width: '25%' }} src={reanimate3} />
-                    <img style={{ width: '25%' }} src={reanimate8} />
+                    <img src={reanimate1} style={{ width: '25%' }} />
+                    <img src={reanimate2} style={{ width: '25%' }} />
+                    <img src={reanimate7} style={{ width: '25%' }} />
+                    <img src={reanimate4} style={{ width: '25%' }} />
+                    <img src={reanimate5} style={{ width: '25%' }} />
+                    <img src={reanimate6} style={{ width: '25%' }} />
+                    <img src={reanimate3} style={{ width: '25%' }} />
+                    <img src={reanimate8} style={{ width: '25%' }} />
                 </div>
                 <div style={{ width: '38%' }}>
                     Myrder focuses on{' '}
                     <EmphasisText
-                        text='Myr Servitor'
-                        front='white'
                         back='black'
+                        front='white'
+                        notBold={true}
+                        text='Myr Servitor'
                     />{' '}
                     as a unique shared resource that can be exploited by both
                     players. 8 copies of{' '}
-                    <EmphasisText text='Reanimate' front='red' back='black' />{' '}
+                    <EmphasisText
+                        back='black'
+                        front='white'
+                        notBold={true}
+                        text='Reanimate'
+                    />{' '}
                     provide a push and pull to the gameplay which helps you
                     fight over the same pool of resources.
                 </div>
