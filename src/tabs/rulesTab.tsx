@@ -10,36 +10,205 @@ import reanimate8 from '../images/cards/reanimate-8.png';
 import { EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
 
+const deckIcon = (
+    <svg
+        style={{
+            fill: 'white',
+            height: '100px',
+            position: 'relative',
+            stroke: 'black',
+            strokeLinejoin: 'round',
+            strokeWidth: '1.4',
+        }}
+        viewBox='0 0 18 18.5'
+    >
+        <polygon points='2 2 12 2 12 14.5 2 14.5' />
+        <polygon points='4 3 14 3 14 15.5 4 15.5' />
+        <polygon points='6 4 16 4 16 16.5 6 16.5' />
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '5pt',
+                strokeWidth: '.1px',
+            }}
+            x='7'
+            y='12.5'
+        >
+            80
+        </text>
+    </svg>
+);
+
+const mulliganIcon = (
+    <svg
+        style={{
+            fill: 'white',
+            height: '100px',
+            position: 'relative',
+            stroke: 'black',
+            strokeLinejoin: 'round',
+            strokeWidth: '1.4',
+        }}
+        viewBox='0 0 28 18.5'
+    >
+        <polygon points='2  2 12 2 12 14.5 2  14.5' />
+        <polygon points='4  3 14 3 14 15.5 4  15.5' />
+        <polygon points='16 2 26 2 26 14.5 16 14.5' />
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '6pt',
+                strokeWidth: '.1px',
+            }}
+            x='7.3'
+            y='12'
+        >
+            7
+        </text>
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '6pt',
+                strokeWidth: '.1px',
+            }}
+            x='17.2'
+            y='10.7'
+        >
+            -1
+        </text>
+    </svg>
+);
+
+const lifeIcon = (
+    <svg
+        style={{
+            fill: 'white',
+            height: '100px',
+            position: 'relative',
+            stroke: 'black',
+            strokeLinejoin: 'round',
+            strokeWidth: '1.4',
+        }}
+        viewBox='0 0 17 18'
+    >
+        <path d='M 9 1 L 2 8 L 2 11 L 9 17 L 16 11 L 16 8 Z L 4 11 L 9 13 L 14 11 Z M 2 11 L 4 11 M 9 13 L 9 17 M 14 11 L 16 11' />
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '4pt',
+                strokeWidth: '.1px',
+            }}
+            x='6.2'
+            y='11'
+        >
+            10
+        </text>
+    </svg>
+);
+
+const graveyardIcon = (
+    <svg
+        style={{
+            fill: 'white',
+            height: '100px',
+            position: 'relative',
+            stroke: 'black',
+            strokeLinejoin: 'round',
+            strokeWidth: '1',
+        }}
+        viewBox='0 0 17 12'
+    >
+        <path d='M 1 3 C 1 3 4 0 7 3 L 7 10 L 1 10 Z' />
+        <path d='M 10 3 C 10 3 13 0 16 3 L 16 10 L 10 10 Z' />
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '4pt',
+                strokeWidth: '.1px',
+            }}
+            x='2.6'
+            y='7.5'
+        >
+            -
+        </text>
+        <text
+            style={{
+                fill: 'black',
+                fontFamily: 'Beleren',
+                fontSize: '4pt',
+                strokeWidth: '.1px',
+            }}
+            x='11.6'
+            y='7.5'
+        >
+            -
+        </text>
+    </svg>
+);
+
+const IconBox = (props: React.PropsWithChildren) => {
+    return (
+        <div
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                width: '50%',
+            }}
+        >
+            {props.children}
+        </div>
+    );
+};
+
 export const RulesTab = () => {
     return (
         <TabContent>
             <p style={{ margin: '40px 20%', textAlign: 'center' }}>
                 <EmphasisText back='black' front='red' text='Myrder' /> is a{' '}
                 Magic format in which two players{' '}
-                <EmphasisText front='black' text='share the same library' />.
+                <EmphasisText front='black' text='share the same library' />
             </p>
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                <ul style={{ marginTop: 0 }}>
-                    <li>
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    margin: '10px 0 30px 0',
+                    rowGap: '20px',
+                }}
+            >
+                <IconBox>
+                    {deckIcon}
+                    <div>
                         The Myrder deck has{' '}
-                        <EmphasisText front='black' text='80 cards' />.
-                    </li>
-                    <li>
+                        <EmphasisText front='black' text='80 cards' />
+                    </div>
+                </IconBox>
+                <IconBox>
+                    {lifeIcon}
+                    <div>
                         Players start at{' '}
-                        <EmphasisText front='black' text='10 life' />.
-                    </li>
-                    <li>
-                        <EmphasisText front='black' text='Graveyards' /> are{' '}
-                        <EmphasisText front='black' text='not shared' />.
-                    </li>
-                    <li>Normal mulligan rules apply.</li>
-                </ul>
-                <ul style={{ margin: 0, width: '40%' }}>
-                    <li>
-                        The owner of a card is the player who put it onto the
-                        battlefield or the player whose hidden zone it is in.
-                    </li>
-                </ul>
+                        <EmphasisText front='black' text='10 life' />
+                    </div>
+                </IconBox>
+                <IconBox>
+                    {graveyardIcon}
+                    <div>
+                        <EmphasisText
+                            front='black'
+                            text='Graveyards are not shared'
+                        />
+                    </div>
+                </IconBox>
+                <IconBox>
+                    {mulliganIcon}
+                    <div>Normal mulligan rules apply</div>
+                </IconBox>
             </div>
             <div
                 style={{
@@ -51,7 +220,7 @@ export const RulesTab = () => {
                     paddingTop: '20px',
                 }}
             >
-                <div style={{ maxWidth: '700px' }}>
+                <div style={{ maxWidth: '400px' }}>
                     <p />
                     <p>
                         <EmphasisText
@@ -64,7 +233,7 @@ export const RulesTab = () => {
                         the deck.
                     </p>
                 </div>
-                <img src={myrServitorCard} style={{ width: '30%' }} />
+                <img src={myrServitorCard} style={{ maxWidth: '20%' }} />
             </div>
             <div style={{ padding: '0 0' }}>
                 <p>
