@@ -18,8 +18,11 @@ export const BodyTabs = () => {
             <TabPanel
                 tabs={[
                     { content: <RulesTab />, label: 'Overview and Rules' },
-                    { content: <DecklistTab />, label: 'Decklist and Primer' },
-                    { content: <ChangelogTab />, label: 'Changelog' },
+                    { content: <DecklistTab />, label: 'Decklist and Tips' },
+                    {
+                        content: <ChangelogTab />,
+                        label: 'Changelog and Maybeboard',
+                    },
                     { content: <AboutTab />, label: 'More Information' },
                 ]}
             />

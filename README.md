@@ -5,20 +5,6 @@ Website for a shared-deck Magic the Gathering format. Check out
 
 ## original primer
 
-**Individual Card Notes** Playing the game and learning all the neat little
-interactions is part of the fun. However, I will mention some of the more
-commonly missed things.
-
-- [[Vault of Whispers]] is an artifact. Some spells let you sacrifice artifacts.
-- Read [[Scene of the Crime]] carefully. Notice anything missing? Here's a clue:
-  look for a tap symbol in the last ability. Didn't find it? Hmm...
-- [[Cannibalize]] has a weird trick where if one of the targets doesn't exist by
-  the time it resolves, you can just do one of the things. For instance, if you
-  cast it targeting your own creatures, you can sacrifice one in response and
-  just get the [[Cannibalize]] counters on the other. If you cast it targeting
-  your opponent's creatures, you can exile one in response and just do the
-  [[Cannibalize]] exile.
-
 **Maybeboard** Cards that I thought about including but haven't.
 
 - [[Ebony Charm]], [[Fade from Memory]], [[Rapid Decay]], [[Scarab Feast]] -
