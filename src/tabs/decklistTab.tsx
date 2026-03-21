@@ -1,6 +1,6 @@
 import { CardImages } from '../images/cards/cardImages';
+import { DarkSection } from '../layout/darkSection';
 import { Title } from '../layout/title';
-import { darkBlue } from '../util/colors';
 import { EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
 
@@ -40,61 +40,6 @@ const CardSlot = (props: {
                     style={{ maxWidth: '300px', width: '96%' }}
                 />
                 <em>{props.description}</em>
-            </div>
-        </div>
-    );
-};
-
-const DecklistSection = (
-    props: {
-        readonly description: string;
-        readonly title: string;
-    } & React.PropsWithChildren,
-) => {
-    return (
-        <div style={{ marginBottom: '40px', width: '100%' }}>
-            <div
-                style={{
-                    background: darkBlue,
-                    border: '1px solid white',
-                    borderRadius: '20px',
-                    margin: '20px auto auto auto',
-                    maxWidth: '1400px',
-                }}
-            >
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                    <span
-                        style={{
-                            background: darkBlue,
-                            border: '1px solid white',
-                            borderRadius: '10px',
-                            fontSize: '24pt',
-                            padding: '0 10px',
-                            position: 'relative',
-                            top: -15,
-                        }}
-                    >
-                        {props.title}
-                    </span>
-                </div>
-                <div
-                    style={{
-                        margin: '20px 30px 40px 30px',
-                        textAlign: 'center',
-                        textWrap: 'balance',
-                    }}
-                >
-                    {props.description}
-                </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-evenly',
-                    }}
-                >
-                    {props.children}
-                </div>
             </div>
         </div>
     );
@@ -153,15 +98,15 @@ export const DecklistTab = () => {
                 All the cards in the deck are shown in this section. There is a
                 text version of the decklist below as well.
             </div>
-            <DecklistSection
+            <DarkSection
                 description='Basic elements of the deck: myr, reanimates, and swamps.'
                 title='Core Elements'
             >
                 <CardSlot cardName='Myr Servitor' count={18} />
                 <CardSlot cardName='Reanimate' count={8} />
                 <CardSlot cardName='Swamp' count={12} />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Card advantage spells. These require you to sacrifice something in order to draw 2 cards.'
                 title='Draw Spells'
             >
@@ -174,8 +119,8 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Fanatical Offering' />
                 <CardSlot cardName='Nasty End' />
                 <CardSlot cardName="Reckoner's Bargain" />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Removal spells. These exile one creature at a time from the battlefield.'
                 title='Removal'
             >
@@ -185,8 +130,8 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Necrotic Wound' />
                 <CardSlot cardName='Worthy Cost' />
                 <CardSlot cardName='Cannibalize' />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Mass removal spells. These usually kill all the myr on the battlefield, but they do not exile them.'
                 title='Wraths'
             >
@@ -195,8 +140,8 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Nausea' />
                 <CardSlot cardName='Shrivel' />
                 <CardSlot cardName='Mephitic Vapors' />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Graveyard removal spells. These exile cards from the graveyard.'
                 title='Graveyard Hate'
             >
@@ -204,8 +149,8 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Cremate' />
                 <CardSlot cardName='Shadowfeed' />
                 <CardSlot cardName='Headstone' />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Other cards. There are a few other cards that do not fit into the categories above.'
                 title='Other Stuff'
             >
@@ -214,8 +159,8 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Inquisition of Kozilek' />
                 <CardSlot cardName='Grave Consequences' />
                 <CardSlot cardName='Haunting Misery' />
-            </DecklistSection>
-            <DecklistSection
+            </DarkSection>
+            <DarkSection
                 description='Ways to produce mana outside of the basic swamps. These can help draw cards or provide some other additional effect.'
                 title='Lands'
             >
@@ -232,7 +177,7 @@ export const DecklistTab = () => {
                 <CardSlot cardName='Tomb Fortress' />
                 <CardSlot cardName='Vault of Whispers' />
                 <CardSlot cardName='Midgar, City of Mako // Reactor Raid' />
-            </DecklistSection>
+            </DarkSection>
             <Title title='Text Decklist' />
             <div
                 style={{
