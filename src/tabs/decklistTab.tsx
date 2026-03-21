@@ -1,28 +1,8 @@
 import { CardImages } from '../images/cards/cardImages';
+import { Title } from '../layout/title';
 import { darkBlue } from '../util/colors';
 import { EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
-
-const Title = (props: { readonly title: string }) => {
-    return (
-        <div
-            style={{ alignItems: 'center', display: 'flex', margin: '20px 0' }}
-        >
-            <hr style={{ flexGrow: 1, margin: '0 20px' }} />
-            <div
-                style={{
-                    color: 'black',
-                    fontSize: '30pt',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                }}
-            >
-                {props.title}
-            </div>
-            <hr style={{ flexGrow: 1, margin: '0 20px' }} />
-        </div>
-    );
-};
 
 const CardSlot = (props: {
     readonly cardName: keyof typeof CardImages;
@@ -121,7 +101,6 @@ const DecklistSection = (
 };
 
 export const DecklistTab = () => {
-    //Decklist content goes here. It should show off the cards in the deck and explain some of the synergy.
     return (
         <TabContent>
             <Title title='Decklist Rationale' />
