@@ -31,7 +31,9 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
                                 cursor: 'pointer',
                                 display: 'flex',
                                 padding: '6px 30px',
+                                position: 'relative',
                                 textAlign: 'center',
+                                top: 2,
                                 touchAction: 'manipulation',
                                 userSelect: 'none',
                             }}
@@ -47,9 +49,10 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
             <div
                 style={{
                     background: myrderBlue,
-                    borderRadius: '10px',
+                    borderRadius: '0 0 10px 10px',
                     flexGrow: 1,
                     padding: '10px',
+                    position: 'relative',
                 }}
             >
                 {props.tabs[activeIndex].content}
