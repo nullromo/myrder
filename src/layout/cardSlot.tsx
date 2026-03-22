@@ -35,20 +35,22 @@ export const CardSlot = (props: {
                         position: 'relative',
                     }}
                 >
-                    {props.count === null ? null : (
-                        <>
-                            <EmphasisText
-                                front='black'
-                                text={`${props.count ?? 1}`}
-                            />{' '}
-                        </>
-                    )}
-                    <EmphasisText
-                        back='black'
-                        front='white'
-                        notBold={true}
-                        text={props.cardName}
-                    />
+                    <div>
+                        {props.count === null ? null : (
+                            <>
+                                <EmphasisText
+                                    front='black'
+                                    text={`${props.count ?? 1}`}
+                                />{' '}
+                            </>
+                        )}
+                        <EmphasisText
+                            back='black'
+                            front='white'
+                            notBold={true}
+                            text={props.cardName}
+                        />
+                    </div>
                     {props.removed ? (
                         <div
                             style={{
