@@ -4,12 +4,12 @@ body {
 
 @font-face {
     font-family: Beleren;
-    src: local('Beleren'), url(./fonts/Beleren.ttf), format('ttf');
+    src: local('Beleren'), url(../fonts/Beleren.ttf), format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: MPlantin;
-    src: local('MPlantin'), url(./fonts/MPlantin.ttf), format('ttf');
+    src: local('MPlantin'), url(../fonts/MPlantin.ttf), format('ttf');
     font-weight: normal;
 }
