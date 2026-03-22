@@ -3,7 +3,7 @@ import { darkBlue } from '../util/colors';
 export const DarkSection = (
     props: {
         readonly description: string;
-        readonly title: string;
+        readonly title?: string;
     } & React.PropsWithChildren,
 ) => {
     return (
@@ -17,21 +17,23 @@ export const DarkSection = (
                     maxWidth: '1400px',
                 }}
             >
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                    <span
-                        style={{
-                            background: darkBlue,
-                            border: '1px solid white',
-                            borderRadius: '10px',
-                            fontSize: '24pt',
-                            padding: '0 10px',
-                            position: 'relative',
-                            top: -15,
-                        }}
-                    >
-                        {props.title}
-                    </span>
-                </div>
+                {props.title ? (
+                    <div style={{ textAlign: 'center', width: '100%' }}>
+                        <span
+                            style={{
+                                background: darkBlue,
+                                border: '1px solid white',
+                                borderRadius: '10px',
+                                fontSize: '24pt',
+                                padding: '0 10px',
+                                position: 'relative',
+                                top: -15,
+                            }}
+                        >
+                            {props.title}
+                        </span>
+                    </div>
+                ) : null}
                 <div
                     style={{
                         margin: '20px 30px 40px 30px',

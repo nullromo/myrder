@@ -1,49 +1,8 @@
-import { CardImages } from '../images/cards/cardImages';
+import { CardSlot } from '../layout/cardSlot';
 import { DarkSection } from '../layout/darkSection';
 import { Title } from '../layout/title';
 import { EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
-
-const CardSlot = (props: {
-    readonly cardName: keyof typeof CardImages;
-    readonly description?: string;
-    readonly count?: number;
-}) => {
-    return (
-        <div
-            style={{
-                alignItems: 'center',
-                columnGap: '10px',
-                display: 'flex',
-                flexDirection: 'column',
-            }}
-        >
-            <div
-                style={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    rowGap: '10px',
-                }}
-            >
-                <div>
-                    <EmphasisText front='black' text={`${props.count ?? 1}`} />{' '}
-                    <EmphasisText
-                        back='black'
-                        front='white'
-                        notBold={true}
-                        text={props.cardName}
-                    />
-                </div>
-                <img
-                    src={CardImages[props.cardName]}
-                    style={{ maxWidth: '300px', width: '96%' }}
-                />
-                <em>{props.description}</em>
-            </div>
-        </div>
-    );
-};
 
 export const DecklistTab = () => {
     return (

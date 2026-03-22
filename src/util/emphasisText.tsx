@@ -37,3 +37,14 @@ export const EmphasisText = (props: {
         </span>
     );
 };
+
+export const CardName = (props: { readonly name: string }) => {
+    return (
+        <EmphasisText
+            back='black'
+            front='white'
+            notBold={true}
+            text={props.name}
+        />
+    );
+};
