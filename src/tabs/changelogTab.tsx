@@ -41,62 +41,34 @@ export const ChangelogTab = () => {
                 why the cards have not been included.
             </div>
             <CardSection description='Extra spells that exile cards from the graveyard. It would be bad to include too many of these because exiling all the myr makes it hard for the game to actually end.'>
-                <CardSlot cardName='Ebony Charm' count={null} small={true} />
-                <CardSlot
-                    cardName='Fade from Memory'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot cardName='Rapid Decay' count={null} small={true} />
-                <CardSlot cardName='Scarab Feast' count={null} small={true} />
+                <CardSlot cardName='Ebony Charm' />
+                <CardSlot cardName='Fade from Memory' />
+                <CardSlot cardName='Rapid Decay' />
+                <CardSlot cardName='Scarab Feast' />
             </CardSection>
             <CardSection description='Artifacts that exile cards from the graveyard. Same rationale as above, and including zero of these makes the decklist a little cleaner with a "no artifacts" rule. '>
-                <CardSlot
-                    cardName='Lantern of the Lost'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot
-                    cardName='Nihil Spellbomb'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot
-                    cardName="Jack-o'-Lantern"
-                    count={null}
-                    small={true}
-                />
-                <CardSlot cardName='Sentinel Totem' count={null} small={true} />
-                <CardSlot cardName='Thran Foundry' count={null} small={true} />
-                <CardSlot cardName="Tormod's Crypt" count={null} small={true} />
-                <CardSlot
-                    cardName='Soul-Guide Lantern'
-                    count={null}
-                    small={true}
-                />
+                <CardSlot cardName='Lantern of the Lost' />
+                <CardSlot cardName='Nihil Spellbomb' />
+                <CardSlot cardName="Jack-o'-Lantern" />
+                <CardSlot cardName='Sentinel Totem' />
+                <CardSlot cardName='Thran Foundry' />
+                <CardSlot cardName="Tormod's Crypt" />
+                <CardSlot cardName='Soul-Guide Lantern' />
             </CardSection>
             <CardSection description='Pretty cool, but just a little too weak.'>
-                <CardSlot cardName='Dredge' count={null} small={true} />
+                <CardSlot cardName='Dredge' />
             </CardSection>
             <CardSection description="Hand disruption. These are fair 1-for-1s, but having too many in the list wouldn't be good. Disrupting someone's only source of draw can snowball the game.">
-                <CardSlot cardName="Mire's Toll" count={null} small={true} />
-                <CardSlot cardName='Dread Fugue' count={null} small={true} />
-                <CardSlot cardName='Duress' count={null} small={true} />
+                <CardSlot cardName="Mire's Toll" />
+                <CardSlot cardName='Dread Fugue' />
+                <CardSlot cardName='Duress' />
             </CardSection>
             <CardSection description='Extra (less-powerful) variations of the card draw spells that are in the list already.'>
-                <CardSlot cardName='Skulltap' count={null} small={true} />
-                <CardSlot
-                    cardName='Merciless Resolve'
-                    count={null}
-                    small={true}
-                />
+                <CardSlot cardName='Skulltap' />
+                <CardSlot cardName='Merciless Resolve' />
             </CardSection>
             <CardSection description='An extra wrath. This could be added if the deck needed another mass removal spell.'>
-                <CardSlot
-                    cardName='Poison the Waters'
-                    count={null}
-                    small={true}
-                />
+                <CardSlot cardName='Poison the Waters' />
             </CardSection>
             <Title title='Exclusions' />
             <div
@@ -111,79 +83,35 @@ export const ChangelogTab = () => {
                 of why it was removed or excluded.
             </div>
             <CardSection description='Unconditional draw spells. These spells let you acrue card advantage without meeting any in-game condition.'>
-                <CardSlot cardName='Sign in Blood' count={null} small={true} />
-                <CardSlot
-                    cardName="Night's Whisper"
-                    count={null}
-                    small={true}
-                />
-                <CardSlot cardName='Corpse Churn' count={null} small={true} />
-                <CardSlot
-                    cardName='Foreboding Fruit'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot
-                    cardName='Infernal Contract'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot cardName='Cruel Bargain' count={null} small={true} />
-                <CardSlot
-                    cardName='Atrocious Experiment'
-                    count={null}
-                    removed={true}
-                    small={true}
-                />
+                <CardSlot cardName='Sign in Blood' />
+                <CardSlot cardName="Night's Whisper" />
+                <CardSlot cardName='Corpse Churn' />
+                <CardSlot cardName='Foreboding Fruit' />
+                <CardSlot cardName='Infernal Contract' />
+                <CardSlot cardName='Cruel Bargain' />
+                <CardSlot cardName='Atrocious Experiment' removed={true} />
             </CardSection>
             <CardSection description='Neat spell, but too clunky to use.'>
-                <CardSlot
-                    cardName="Titan's Presence"
-                    count={null}
-                    small={true}
-                />
+                <CardSlot cardName="Titan's Presence" />
             </CardSection>
             <CardSection description="Too tricky to use and doesn't provide enough extra wow factor over other similar cards.">
-                <CardSlot
-                    cardName='Bankrupt in Blood'
-                    count={null}
-                    removed={true}
-                    small={true}
-                />
+                <CardSlot cardName='Bankrupt in Blood' removed={true} />
             </CardSection>
             <CardSection description='Kinda cool to sacrifice, but colorless mana hurts a lot when most of the spells cost 1-2 mana and are black.'>
-                <CardSlot
-                    cardName='Darksteel Citadel'
-                    count={null}
-                    small={true}
-                />
+                <CardSlot cardName='Darksteel Citadel' />
             </CardSection>
             <CardSection description="Neat forms of card advantage that can even pick up cycling/spell lands, but the spells in the deck are so black mana intensive that these don't really work and they feel bad to draw.">
-                <CardSlot
-                    cardName='Guildless Commons'
-                    count={null}
-                    small={true}
-                />
-                <CardSlot cardName='Arid Archway' count={null} small={true} />
+                <CardSlot cardName='Guildless Commons' />
+                <CardSlot cardName='Arid Archway' />
             </CardSection>
             <CardSection description="Manipulates the top of the deck and provides card advantage, but costs 4 mana so it doesn't play well.">
-                <CardSlot
-                    cardName='Agonizing Memories'
-                    count={null}
-                    removed={true}
-                    small={true}
-                />
+                <CardSlot cardName='Agonizing Memories' removed={true} />
             </CardSection>
             <CardSection description='Extremely powerful repeatable removal, card draw, life gain, etc. This card does everything and it does way too much of it.'>
-                <CardSlot
-                    cardName='Cling to Dust'
-                    count={null}
-                    removed={true}
-                    small={true}
-                />
+                <CardSlot cardName='Cling to Dust' removed={true} />
             </CardSection>
             <CardSection description="Non-exile targeted removal, but it's repeatable. Since the escape cost is only 2 cards, this one would probably get out of hand. After seeing how Cling to Dust played, this one would likely be too unfair.">
-                <CardSlot cardName="Mogis's Favor" count={null} small={true} />
+                <CardSlot cardName="Mogis's Favor" />
             </CardSection>
             <Title title='Changelog' />
             <div
