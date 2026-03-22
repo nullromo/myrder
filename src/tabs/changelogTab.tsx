@@ -124,6 +124,17 @@ export const ChangelogTab = () => {
                 This section showcases the history of the decklist and explains
                 each change that has occurred.
             </div>
+            <DarkSection description='March 2026'>
+                <div style={{ textAlign: 'left', width: '95%' }}>
+                    <ul>
+                        <li>
+                            Created Myrder website! Deployed on myrder.com in
+                            anticipation of advertising the format at MagicCon
+                            Vegas 2026 in May.
+                        </li>
+                    </ul>
+                </div>
+            </DarkSection>
             <DarkSection description='2 December 2025'>
                 <div style={{ textAlign: 'left', width: '95%' }}>
                     <ul>
