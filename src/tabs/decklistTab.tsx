@@ -1,13 +1,203 @@
+import { ManaImages } from '../images/mana/cardImages';
 import { CardSlot } from '../layout/cardSlot';
 import { DarkSection } from '../layout/darkSection';
 import { Title } from '../layout/title';
-import { EmphasisText } from '../util/emphasisText';
+import { CardName, EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
+
+const DecklistCard = (props: {
+    readonly count?: number;
+    readonly name: string;
+    readonly mana: Array<keyof typeof ManaImages>;
+}) => {
+    return (
+        <div
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: '100%',
+            }}
+        >
+            <div style={{ display: 'flex', paddingRight: '10px' }}>
+                <div
+                    style={{
+                        paddingRight: '6px',
+                        textAlign: 'right',
+                        width: '24px',
+                    }}
+                >
+                    <EmphasisText front='black' text={`${props.count ?? 1}`} />
+                </div>
+                <CardName name={props.name} />
+            </div>
+            <div
+                style={{
+                    display: 'flex',
+                    height: '16pt',
+                    justifyContent: 'flex-end',
+                    paddingRight: '20%',
+                    width: '16pt',
+                }}
+            >
+                {props.mana.map((symbol, index) => {
+                    return (
+                        <img
+                            key={index}
+                            src={ManaImages[symbol]}
+                            style={{ height: '16pt', width: '16pt' }}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+const DecklistSection = (
+    props: { readonly title: string } & React.PropsWithChildren,
+) => {
+    return (
+        <div
+            style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
+        >
+            <div style={{ paddingTop: '4px' }}>
+                <EmphasisText front='black' text={props.title} />
+            </div>
+            {props.children}
+        </div>
+    );
+};
 
 export const DecklistTab = () => {
     return (
         <TabContent>
-            <Title title='Decklist Rationale' />
+            <Title title='Decklist' />
+            <p
+                style={{
+                    marginTop: 0,
+                    padding: '0 4%',
+                    textAlign: 'center',
+                    textWrap: 'balance',
+                }}
+            >
+                This section lists the Myrder deck. The sections below explain
+                the cards in detail and provide additional context about the
+                construction of the deck.
+            </p>
+            <div
+                style={{
+                    display: 'flex',
+                    fontSize: '16pt',
+                    justifyContent: 'center',
+                    marginBottom: '20px',
+                }}
+            >
+                <div style={{ maxWidth: '600px', width: '100%' }}>
+                    <DecklistSection title='Core Elements'>
+                        <DecklistCard
+                            count={18}
+                            mana={['1']}
+                            name='Myr Servitor'
+                        />
+                        <DecklistCard count={8} mana={['B']} name='Reanimate' />
+                    </DecklistSection>
+                    <DecklistSection title='Draw Spells'>
+                        <DecklistCard
+                            mana={['B']}
+                            name='Corrupted Conviction'
+                        />
+                        <DecklistCard mana={['B']} name='Village Rites' />
+                        <DecklistCard mana={['1', 'B']} name="Altar's Reap" />
+                        <DecklistCard mana={['1', 'B']} name='Costly Plunder' />
+                        <DecklistCard mana={['1', 'B']} name='Deadly Dispute' />
+                        <DecklistCard
+                            mana={['1', 'B']}
+                            name="Eviscerator's Insight"
+                        />
+                        <DecklistCard
+                            mana={['1', 'B']}
+                            name='Fanatical Offering'
+                        />
+                        <DecklistCard mana={['1', 'B']} name='Nasty End' />
+                        <DecklistCard
+                            mana={['1', 'B']}
+                            name="Reckoner's Bargain"
+                        />
+                    </DecklistSection>
+                    <DecklistSection title='Removal'>
+                        <DecklistCard mana={['B']} name='Eaten Alive' />
+                        <DecklistCard mana={['B']} name='Final Vengeance' />
+                        <DecklistCard mana={['B']} name='Infernal Reckoning' />
+                        <DecklistCard mana={['B']} name='Necrotic Wound' />
+                        <DecklistCard mana={['B']} name='Worthy Cost' />
+                        <DecklistCard mana={['1', 'B']} name='Cannibalize' />
+                    </DecklistSection>
+                    <DecklistSection title='Other Stuff'>
+                        <DecklistCard mana={['B']} name='Cabal Therapy' />
+                        <DecklistCard mana={['B']} name='Entomb' />
+                        <DecklistCard
+                            mana={['B']}
+                            name='Inquisition of Kozilek'
+                        />
+                        <DecklistCard
+                            mana={['1', 'B']}
+                            name='Grave Consequences'
+                        />
+                        <DecklistCard
+                            mana={['1', 'B', 'B']}
+                            name='Haunting Misery'
+                        />
+                    </DecklistSection>
+                </div>
+                <div style={{ maxWidth: '600px', width: '100%' }}>
+                    <DecklistSection title='Graveyard Hate'>
+                        <DecklistCard mana={['B']} name='Coffin Purge' />
+                        <DecklistCard mana={['B']} name='Cremate' />
+                        <DecklistCard mana={['B']} name='Shadowfeed' />
+                        <DecklistCard mana={['1', 'B']} name='Headstone' />
+                    </DecklistSection>
+                    <DecklistSection title='Wraths'>
+                        <DecklistCard mana={['B', 'B']} name='Bile Blight' />
+                        <DecklistCard
+                            mana={['X', 'B', 'B']}
+                            name="Black Sun's Zenith"
+                        />
+                        <DecklistCard mana={['1', 'B']} name='Nausea' />
+                        <DecklistCard mana={['1', 'B']} name='Shrivel' />
+                        <DecklistCard
+                            mana={['2', 'B']}
+                            name='Mephitic Vapors'
+                        />
+                    </DecklistSection>
+                    <DecklistSection title='Lands'>
+                        <DecklistCard count={12} mana={[]} name='Swamp' />
+                        <DecklistCard mana={[]} name='Barren Moor' />
+                        <DecklistCard mana={[]} name='Blast Zone' />
+                        <DecklistCard mana={[]} name='Blasted Landscape' />
+                        <DecklistCard mana={[]} name='Cryptic Caves' />
+                        <DecklistCard
+                            mana={[]}
+                            name='Desert of the Glorified'
+                        />
+                        <DecklistCard mana={[]} name='Polluted Mire' />
+                        <DecklistCard mana={[]} name='Roadside Reliquary' />
+                        <DecklistCard mana={[]} name='Scene of the Crime' />
+                        <DecklistCard
+                            mana={[]}
+                            name='Takenuma, Abandoned Mire'
+                        />
+                        <DecklistCard mana={[]} name='The Dross Pits' />
+                        <DecklistCard mana={[]} name='Tomb Fortress' />
+                        <DecklistCard mana={[]} name='Vault of Whispers' />
+                        <DecklistCard
+                            mana={['2', 'B']}
+                            name='Midgar, City of Mako // Reactor Raid'
+                        />
+                    </DecklistSection>
+                </div>
+            </div>
+            <Title title='Rationale' />
             This list was created using the following guiding principles.*
             <ol>
                 <li>
@@ -52,7 +242,7 @@ export const DecklistTab = () => {
                 *These are guiding principles, not hard rules. There may be some
                 small bends or breaks.
             </em>
-            <Title title='Decklist' />
+            <Title title='Card Details' />
             <div style={{ marginBottom: '20px', textAlign: 'center' }}>
                 All the cards in the deck are shown in this section. There is a
                 text version of the decklist below as well.
