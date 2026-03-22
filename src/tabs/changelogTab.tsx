@@ -26,7 +26,6 @@ const CardSection = (
 };
 
 export const ChangelogTab = () => {
-    // Changelog content goes here. It should be a blog-like running account of what has changed.
     return (
         <TabContent>
             <Title title='Maybeboard' />
@@ -294,18 +293,6 @@ export const ChangelogTab = () => {
                     </ul>
                 </div>
             </DarkSection>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </TabContent>
     );
 };
