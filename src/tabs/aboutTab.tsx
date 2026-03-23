@@ -140,9 +140,9 @@ export const AboutTab = () => {
                     Wizards of the Coast Fan Content Policy
                 </a>
                 {''}. Information presented on this website about Magic: The
-                Gathering, including card images and mana symbols, is copyright
-                Wizards of the Coast, LLC. Myrder.com is not produced by or
-                endorsed by Wizards of the Coast.
+                Gathering, including card images, fonts, and mana symbols, is
+                copyright Wizards of the Coast, LLC. Myrder.com is not produced
+                by or endorsed by Wizards of the Coast.
             </div>
         </TabContent>
     );
