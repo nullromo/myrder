@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+a {
+    color: lightgray;
+}
+
 @font-face {
     font-family: Beleren;
     src: local('Beleren'), url(../fonts/Beleren.ttf), format('ttf');
