@@ -47,6 +47,20 @@ export const ChangelogTab = () => {
                             anticipation of advertising the format at MagicCon
                             Vegas 2026 in May.
                         </li>
+                        <li>
+                            Created Myrder{' '}
+                            <a href='https://discord.gg/xukXaPA6UH'>
+                                discord{' '}
+                                <span
+                                    style={{ textDecoration: 'line-through' }}
+                                >
+                                    server
+                                </span>{' '}
+                                servitor
+                            </a>
+                            {''}! If many people end up visiting this website,
+                            they need a place to get in touch with one another.
+                        </li>
                     </ul>
                 </div>
             </DarkSection>
