@@ -198,12 +198,7 @@ export const RulesTab = () => {
                 </IconBox>
                 <IconBox>
                     {graveyardIcon}
-                    <div>
-                        <EmphasisText
-                            front='black'
-                            text='Graveyards are not shared'
-                        />
-                    </div>
+                    <div>Graveyards are not shared</div>
                 </IconBox>
                 <IconBox>
                     {mulliganIcon}
