@@ -3,6 +3,7 @@ import { TabContent } from './tabContent';
 import myrderFront from '../images/myrder-front.png';
 import githubLogo from '../images/github.svg';
 import venmoLogo from '../images/venmo.png';
+import discordLogo from '../images/discord.png';
 import myrderBack from '../images/myrder-back.png';
 
 const LogoButton = (props: {
@@ -29,15 +30,24 @@ const LogoButton = (props: {
                     width: 'fit-content',
                 }}
             >
-                <img
-                    src={props.image}
+                <div
                     style={{
+                        alignItems: 'center',
                         background: 'white',
                         borderRadius: '10px',
-                        padding: '2px',
-                        width: '34px',
+                        display: 'flex',
+                        height: '38px',
                     }}
-                />
+                >
+                    <img
+                        src={props.image}
+                        style={{
+                            borderRadius: '10px',
+                            padding: '2px',
+                            width: '34px',
+                        }}
+                    />
+                </div>
                 {props.title}
             </div>
         </a>
@@ -62,6 +72,29 @@ export const AboutTab = () => {
                 />
             </div>
             <Title title='Links' />
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    marginBottom: '10px',
+                }}
+            >
+                <div style={{ paddingRight: '10px' }}>
+                    <LogoButton
+                        background='#5865f2'
+                        href='https://discord.gg/xukXaPA6UH'
+                        image={discordLogo}
+                        title='Discord'
+                    />
+                </div>
+                <div>
+                    Join our Discord{' '}
+                    <span style={{ textDecoration: 'line-through' }}>
+                        server
+                    </span>{' '}
+                    servitor
+                </div>
+            </div>
             <div
                 style={{
                     alignItems: 'center',
@@ -102,7 +135,7 @@ export const AboutTab = () => {
                 </div>
                 <div>Support on Venmo</div>
             </div>
-            <em>
+            <em style={{ fontSize: '16pt', paddingTop: '20px' }}>
                 Also check out{' '}
                 <a href='https://deckstats.net/decks/102881/3247652-kyle-s-forgetful-fish'>
                     my Forgetful Fish list
