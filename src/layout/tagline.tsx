@@ -1,4 +1,6 @@
 import { myrderBlue, myrderRed } from '../util/colors';
+import discordLogo from '../images/discord.png';
+import { LogoButton } from './logoButton';
 
 export const Tagline = () => {
     return (
@@ -39,13 +41,29 @@ export const Tagline = () => {
                     fontSize: '20pt',
                     fontStyle: 'italic',
                     justifyContent: 'space-around',
-                    marginBottom: '80px',
+                    marginBottom: '50px',
                     width: '100%',
                 }}
             >
                 <div>{`"It's black Dandân"`}</div>
                 <div>{'"I love it!"'}</div>
                 <div>{'"Definitely worth a try"'}</div>
+            </div>
+            <div
+                style={{
+                    display: 'flex',
+                    fontSize: '20pt',
+                    justifyContent: 'center',
+                    marginBottom: '50px',
+                }}
+            >
+                <LogoButton
+                    background='#5865f2'
+                    borderColor='white'
+                    href='https://discord.gg/xukXaPA6UH'
+                    image={discordLogo}
+                    title='Join our Discord'
+                />
             </div>
         </div>
     );

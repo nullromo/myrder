@@ -1,56 +1,32 @@
+import discordLogo from '../images/discord.png';
+import githubLogo from '../images/github.svg';
+import myrderBack from '../images/myrder-back.png';
+import myrderFront from '../images/myrder-front.png';
+import venmoLogo from '../images/venmo.png';
+import type { LogoButtonProps } from '../layout/logoButton';
+import { LogoButton } from '../layout/logoButton';
 import { Title } from '../layout/title';
 import { TabContent } from './tabContent';
-import myrderFront from '../images/myrder-front.png';
-import githubLogo from '../images/github.svg';
-import venmoLogo from '../images/venmo.png';
-import discordLogo from '../images/discord.png';
-import myrderBack from '../images/myrder-back.png';
 
-const LogoButton = (props: {
-    readonly title: string;
-    readonly image: string;
-    readonly background?: string;
-    readonly href: string;
-}) => {
+const LogoLink = (props: LogoButtonProps & React.PropsWithChildren) => {
     return (
-        <a
-            href={props.href}
-            style={{ color: 'inherit', textDecoration: 'none' }}
+        <div
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                marginBottom: '10px',
+            }}
         >
-            <div
-                style={{
-                    alignItems: 'center',
-                    background: props.background ?? 'black',
-                    border: props.background ? '2px solid black' : '',
-                    borderRadius: '10px',
-                    columnGap: '6px',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    padding: '4px 10px',
-                    width: 'fit-content',
-                }}
-            >
-                <div
-                    style={{
-                        alignItems: 'center',
-                        background: 'white',
-                        borderRadius: '10px',
-                        display: 'flex',
-                        height: '38px',
-                    }}
-                >
-                    <img
-                        src={props.image}
-                        style={{
-                            borderRadius: '10px',
-                            padding: '2px',
-                            width: '34px',
-                        }}
-                    />
-                </div>
-                {props.title}
+            <div style={{ paddingRight: '10px' }}>
+                <LogoButton
+                    background={props.background}
+                    href={props.href}
+                    image={props.image}
+                    title={props.title}
+                />
             </div>
-        </a>
+            {props.children}
+        </div>
     );
 };
 
@@ -72,21 +48,12 @@ export const AboutTab = () => {
                 />
             </div>
             <Title title='Links' />
-            <div
-                style={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    marginBottom: '10px',
-                }}
+            <LogoLink
+                background='#5865f2'
+                href='https://discord.gg/xukXaPA6UH'
+                image={discordLogo}
+                title='Discord'
             >
-                <div style={{ paddingRight: '10px' }}>
-                    <LogoButton
-                        background='#5865f2'
-                        href='https://discord.gg/xukXaPA6UH'
-                        image={discordLogo}
-                        title='Discord'
-                    />
-                </div>
                 <div>
                     Join our Discord{' '}
                     <span style={{ textDecoration: 'line-through' }}>
@@ -94,21 +61,12 @@ export const AboutTab = () => {
                     </span>{' '}
                     servitor
                 </div>
-            </div>
-            <div
-                style={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    marginBottom: '10px',
-                }}
+            </LogoLink>
+            <LogoLink
+                href='https://github.com/nullromo/myrder'
+                image={githubLogo}
+                title='GitHub'
             >
-                <div style={{ paddingRight: '10px' }}>
-                    <LogoButton
-                        href='https://github.com/nullromo/myrder'
-                        image={githubLogo}
-                        title='GitHub'
-                    />
-                </div>
                 <div>
                     {'Check out the page, '}
                     <a href='https://github.com/nullromo/myrder/issues'>
@@ -117,24 +75,15 @@ export const AboutTab = () => {
                     {', or '}
                     <a href='https://github.com/sponsors/nullromo'>sponsor</a>
                 </div>
-            </div>
-            <div
-                style={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    marginBottom: '10px',
-                }}
+            </LogoLink>
+            <LogoLink
+                background='#0074d3'
+                href='https://venmo.com/u/Kyle-Kovacs'
+                image={venmoLogo}
+                title='Venmo'
             >
-                <div style={{ paddingRight: '10px' }}>
-                    <LogoButton
-                        background='#0074d3'
-                        href='https://venmo.com/u/Kyle-Kovacs'
-                        image={venmoLogo}
-                        title='Venmo'
-                    />
-                </div>
                 <div>Support on Venmo</div>
-            </div>
+            </LogoLink>
             <em style={{ fontSize: '16pt', paddingTop: '20px' }}>
                 Also check out{' '}
                 <a href='https://deckstats.net/decks/102881/3247652-kyle-s-forgetful-fish'>
