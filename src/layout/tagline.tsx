@@ -1,5 +1,6 @@
-import { myrderBlue, myrderRed } from '../util/colors';
+import { DISCORD_LINK } from '../discordLink';
 import discordLogo from '../images/discord.png';
+import { myrderBlue, myrderRed } from '../util/colors';
 import { LogoButton } from './logoButton';
 
 export const Tagline = () => {
@@ -60,7 +61,7 @@ export const Tagline = () => {
                 <LogoButton
                     background='#5865f2'
                     borderColor='white'
-                    href='https://discord.gg/xukXaPA6UH'
+                    href={DISCORD_LINK}
                     image={discordLogo}
                     title='Join our Discord'
                 />

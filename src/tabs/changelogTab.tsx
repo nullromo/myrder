@@ -1,3 +1,4 @@
+import { DISCORD_LINK } from '../discordLink';
 import { CardSlot } from '../layout/cardSlot';
 import { DarkSection } from '../layout/darkSection';
 import { Title } from '../layout/title';
@@ -49,7 +50,7 @@ export const ChangelogTab = () => {
                         </li>
                         <li>
                             Created Myrder{' '}
-                            <a href='https://discord.gg/xukXaPA6UH'>
+                            <a href={DISCORD_LINK}>
                                 discord{' '}
                                 <span
                                     style={{ textDecoration: 'line-through' }}

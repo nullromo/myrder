@@ -1,3 +1,4 @@
+import { DISCORD_LINK } from '../discordLink';
 import discordLogo from '../images/discord.png';
 import githubLogo from '../images/github.svg';
 import myrderBack from '../images/myrder-back.png';
@@ -50,7 +51,7 @@ export const AboutTab = () => {
             <Title title='Links' />
             <LogoLink
                 background='#5865f2'
-                href='https://discord.gg/xukXaPA6UH'
+                href={DISCORD_LINK}
                 image={discordLogo}
                 title='Discord'
             >
