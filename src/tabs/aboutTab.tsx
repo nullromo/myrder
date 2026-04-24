@@ -1,9 +1,9 @@
 import { DISCORD_LINK } from '../discordLink';
-import discordLogo from '../images/discord.png';
+import discordLogo from '../images/discord.webp';
 import githubLogo from '../images/github.svg';
-import myrderBack from '../images/myrder-back.png';
-import myrderFront from '../images/myrder-front.png';
-import venmoLogo from '../images/venmo.png';
+import myrderBack from '../images/myrder-back.webp';
+import myrderFront from '../images/myrder-front.webp';
+import venmoLogo from '../images/venmo.webp';
 import type { LogoButtonProps } from '../layout/logoButton';
 import { LogoButton } from '../layout/logoButton';
 import { Title } from '../layout/title';

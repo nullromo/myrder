@@ -1,5 +1,5 @@
 import { DISCORD_LINK } from '../discordLink';
-import discordLogo from '../images/discord.png';
+import discordLogo from '../images/discord.webp';
 import { myrderBlue, myrderRed } from '../util/colors';
 import { LogoButton } from './logoButton';
 

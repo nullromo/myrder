@@ -1,4 +1,4 @@
-import myrServitor from '../images/myr-servitor-art.jpg';
+import myrServitor from '../images/myr-servitor-art.webp';
 import { MyrderTitle } from './myrderTitle';
 
 export const PictureTitle = () => {

@@ -1,12 +1,12 @@
-import myrServitorCard from '../images/cards/myr-servitor.png';
-import reanimate1 from '../images/cards/reanimate-1.png';
-import reanimate2 from '../images/cards/reanimate-2.png';
-import reanimate3 from '../images/cards/reanimate-3.png';
-import reanimate4 from '../images/cards/reanimate-4.png';
-import reanimate5 from '../images/cards/reanimate-5.png';
-import reanimate6 from '../images/cards/reanimate-6.png';
-import reanimate7 from '../images/cards/reanimate-7.png';
-import reanimate8 from '../images/cards/reanimate-8.png';
+import myrServitorCard from '../images/cards/myr-servitor.webp';
+import reanimate1 from '../images/cards/reanimate-1.webp';
+import reanimate2 from '../images/cards/reanimate-2.webp';
+import reanimate3 from '../images/cards/reanimate-3.webp';
+import reanimate4 from '../images/cards/reanimate-4.webp';
+import reanimate5 from '../images/cards/reanimate-5.webp';
+import reanimate6 from '../images/cards/reanimate-6.webp';
+import reanimate7 from '../images/cards/reanimate-7.webp';
+import reanimate8 from '../images/cards/reanimate-8.webp';
 import { EmphasisText } from '../util/emphasisText';
 import { TabContent } from './tabContent';
 
