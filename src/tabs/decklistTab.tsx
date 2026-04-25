@@ -81,9 +81,20 @@ export const DecklistTab = () => {
                     textWrap: 'balance',
                 }}
             >
-                This section lists the Myrder deck. The sections below explain
-                the cards in detail and provide additional context about the
-                construction of the deck.
+                This section lists the standard Myrder deck. The sections below
+                explain the cards in detail and provide additional context about
+                the construction of the deck.
+            </p>
+            <p
+                style={{
+                    marginTop: 0,
+                    padding: '0 4%',
+                    textAlign: 'center',
+                    textWrap: 'balance',
+                }}
+            >
+                The decklist here is the {'"stock decklist,"'} but feel free to
+                customize your own personal list to your liking :)
             </p>
             <div
                 style={{
@@ -242,6 +253,27 @@ export const DecklistTab = () => {
                 *These are guiding principles, not hard rules. There may be some
                 small bends or breaks.
             </em>
+            <p style={{ color: 'lightgray' }}>
+                If you want to make changes for your own personal decklist,
+                consider the guidelines above. You can also check out the
+                changelog and maybeboard to get some insight and/or inspiration.
+                Some additional optional rules that have been experimented with
+                include a) different mulligan rules, b) all land cards have{' '}
+                {'"'}Cycling{' '}
+                <img
+                    src={ManaImages['2']}
+                    style={{
+                        height: '20pt',
+                        position: 'relative',
+                        top: '5px',
+                        width: '20pt',
+                    }}
+                />
+                {',"'} c) different starting life totals, and d) different total
+                deck size. You can also join the Discord server to chat with
+                others about decklist changes, variants, and other optional
+                rules!
+            </p>
             <Title title='Card Details' />
             <div style={{ marginBottom: '20px', textAlign: 'center' }}>
                 All the cards in the deck are shown in this section. There is a
