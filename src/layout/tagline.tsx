@@ -8,7 +8,7 @@ export const Tagline = () => {
         <div style={{ width: '100%' }}>
             <div
                 style={{
-                    fontFamily: 'MPlantin',
+                    fontFamily: 'MPlantin, serif',
                     fontSize: '30pt',
                     textAlign: 'center',
                 }}
@@ -38,7 +38,7 @@ export const Tagline = () => {
             <div
                 style={{
                     display: 'flex',
-                    fontFamily: 'MPlantin',
+                    fontFamily: 'MPlantin, serif',
                     fontSize: '20pt',
                     fontStyle: 'italic',
                     justifyContent: 'space-around',

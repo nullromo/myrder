@@ -28,7 +28,7 @@ const deckIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '5pt',
                 strokeWidth: '.1px',
             }}
@@ -58,7 +58,7 @@ const mulliganIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '6pt',
                 strokeWidth: '.1px',
             }}
@@ -70,7 +70,7 @@ const mulliganIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '6pt',
                 strokeWidth: '.1px',
             }}
@@ -98,7 +98,7 @@ const lifeIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '4pt',
                 strokeWidth: '.1px',
             }}
@@ -127,7 +127,7 @@ const graveyardIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '4pt',
                 strokeWidth: '.1px',
             }}
@@ -139,7 +139,7 @@ const graveyardIcon = (
         <text
             style={{
                 fill: 'black',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '4pt',
                 strokeWidth: '.1px',
             }}

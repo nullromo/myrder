@@ -45,7 +45,7 @@ export const Body = () => {
                             boxShadow: '0px 0px 2px 2px black',
                             color: 'inherit',
                             cursor: 'pointer',
-                            fontFamily: 'MPlantin',
+                            fontFamily: 'MPlantin, serif',
                             margin: '0 20px 12px 0',
                             padding: '10px',
                             position: 'fixed',

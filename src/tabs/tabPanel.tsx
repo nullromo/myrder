@@ -11,7 +11,7 @@ export const TabPanel = (props: { readonly tabs: TabData[] }) => {
             <div
                 style={{
                     display: 'flex',
-                    fontFamily: 'MPlantin',
+                    fontFamily: 'MPlantin, serif',
                     fontSize: '20pt',
                     justifyContent: 'space-evenly',
                     width: '100%',

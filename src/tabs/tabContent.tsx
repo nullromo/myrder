@@ -4,7 +4,7 @@ export const TabContent = (props: React.PropsWithChildren) => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                fontFamily: 'MPlantin',
+                fontFamily: 'MPlantin, serif',
                 fontSize: '20pt',
             }}
         >

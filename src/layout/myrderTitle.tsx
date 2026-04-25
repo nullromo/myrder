@@ -7,7 +7,7 @@ export const MyrderTitle = () => {
                 background: 'black',
                 borderRadius: '20px',
                 boxShadow: '0px 0px 12px 8px',
-                fontFamily: 'Beleren',
+                fontFamily: 'Beleren, serif',
                 fontSize: '64pt',
                 height: 'fit-content',
                 padding: '0 24px 0 20px',

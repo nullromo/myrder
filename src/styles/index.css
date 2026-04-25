@@ -8,12 +8,14 @@ a {
 
 @font-face {
     font-family: Beleren;
-    src: local('Beleren'), url(../fonts/Beleren.ttf), format('ttf');
+    src: local('Beleren'), url(../fonts/Beleren.ttf), format('truetype');
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: MPlantin;
-    src: local('MPlantin'), url(../fonts/MPlantin.ttf), format('ttf');
+    src: local('MPlantin'), url(../fonts/MPlantin.ttf), format('truetype');
     font-weight: normal;
+    font-display: swap;
 }
