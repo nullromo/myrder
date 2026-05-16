@@ -40,6 +40,19 @@ export const ChangelogTab = () => {
                 This section showcases the history of the decklist and explains
                 each change that has occurred.
             </div>
+            <DarkSection description='May 2026'>
+                <div style={{ textAlign: 'left', width: '95%' }}>
+                    <ul>
+                        <li>
+                            MagicCon Vegas! Over 750 business cards were handed
+                            out. The format was demoed and many people tried it
+                            out. Lots of folks said they would bring it back to
+                            their friends, and some people even joined the
+                            Discord.
+                        </li>
+                    </ul>
+                </div>
+            </DarkSection>
             <DarkSection description='March 2026'>
                 <div style={{ textAlign: 'left', width: '95%' }}>
                     <ul>
